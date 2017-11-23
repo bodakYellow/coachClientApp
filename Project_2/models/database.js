@@ -7,9 +7,11 @@ module.exports = function(sequelize, DataTypes) {
     location: DataTypes.STRING,
     dateTime: DataTypes.STRING
   });
+
   var trainer = sequelize.define("trainer", {
     name: DataTypes.STRING,
     password: DataTypes.STRING,
+
     email: DataTypes.STRING,
     goal: DataTypes.STRING,
     location: DataTypes.STRING,

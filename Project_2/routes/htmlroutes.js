@@ -22,5 +22,23 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/confirmClient.html"));
   });
 
+//----------trainer pages below
+
+  app.get("/newOrExistingTrainer", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/newOrExistingTrainer.html"));
+  });
+
+  app.get("/createTrainer", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/createTrainer.html"));
+  });
+
+  app.get("/signInTrainer", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/signInTrainer.html"));
+  });
+
+  app.get("/apptsForTrainer", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/apptsForTrainer.html"));
+  });
+
 
 };
