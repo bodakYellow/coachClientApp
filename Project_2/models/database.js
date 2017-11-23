@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
 };
 
 module.exports = function(sequelize, DataTypes) {
-  var trainer = sequelize.define("trainer", {
+  var trainer = sequelize.define("Trainer", {
   	name: DataTypes.STRING,
     email: DataTypes.STRING,
     goal: DataTypes.STRING,
