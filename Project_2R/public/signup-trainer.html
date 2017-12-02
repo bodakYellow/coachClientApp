@@ -50,29 +50,38 @@
       <form class="container">
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" class="form-control" id="username" placeholder="Username">
+          <input name="trainer-username" type="text" class="form-control" id="trainer-username" placeholder="Username">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input name="trainer-password" type="password" class="form-control" id="trainer-password" placeholder="Password">
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <input name="trainer-email" type="email" class="form-control" id="trainer-email" aria-describedby="emailHelp" placeholder="Enter email">
         </div>
         <div class="form-group">
           <label for="goal">What do you teach</label>
-          <input type="text" class="form-control" id="goal" placeholder="Write here">
+          <input name="trainer-activity" type="text" class="form-control" id="trainer-activity" placeholder="Write here">
         </div>
-        <div style="text-align:center">
+        <div class="form-group">
+         <label for="location">Where do you want to meet?</label>
+         <input name="trainer-location" type="text" class="form-control" id="trainer-location" placeholder="Write here">
+        </div>
+        <div class="form-group">
+         <label for="time">What date and time works for you?</label>
+         <input name="trainer-time" type="text" class="form-control" id="trainer-time" placeholder="MM/DD/YYYY HH:MM">
+        </div>
+        <div class="form-group">
+    	    <label for="goal">Tell Us Your Goal</label>
+    	    <input name="trainer-goal" type="text" class="form-control" id="trainer-goal" placeholder="Write here">
+    	  </div>
+        <div style="text-align:center" id="add-trainer">
           <a href="/template-nav" class="btn btn-danger btn-lg">Register!</a>
         </div>
       </form>
     </div>
   </section>
-
-
-
 
   <!-- Footer -->
   <footer id="footer-sub">
@@ -123,6 +132,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="assets/js/agency.js"></script>
+  <script src="assets/js/signup-trainer.js"></script>
 
 </body>
 

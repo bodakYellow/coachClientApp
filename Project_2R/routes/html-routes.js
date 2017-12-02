@@ -18,22 +18,14 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/signup-client.html"));
   });
 
-  app.get("/signup-trainer", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/signup-trainer.html"));
-  });
-
   app.get("/template-nav", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/template-nav.html"));
   });
 
-
-
 //----------trainer pages below
 
-  app.get("/newOrExistingTrainer", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/newOrExistingTrainer.html"));
+  app.get("/signup-trainer", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/signup-trainer.html"));
   });
-
-
 
 };

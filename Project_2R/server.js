@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8070;
 
 var db = require("./models");
 
@@ -14,9 +14,10 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static("public"));
 
 require("./routes/clients-api-routes.js")(app);
+require("./routes/trainers-api-routes.js")(app);
 require("./routes/html-routes.js") (app);
 
-db.sequelize.sync().then(function() {
+db.sequelize.sync({force: false}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
