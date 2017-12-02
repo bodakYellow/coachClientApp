@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Clients = sequelize.define("Clients", {
+  var Trainers = sequelize.define("Trainers", {
     name: DataTypes.STRING,
     password: DataTypes.STRING,
     email: DataTypes.STRING,
@@ -9,13 +9,11 @@ module.exports = function(sequelize, DataTypes) {
     activity: DataTypes.STRING
   });
 
-  Clients.associate = function(models) {
-      Clients.belongsTo(models.Trainers, {
-          foreignKey: {
-              allowNull: false
-          }
+  Trainers.associate = function(models){
+      Trainers.hasMany(models.Clients, {
+          // input query append clients info to trainer page
       });
   };
 
-return Clients;
+return Trainers;
 };
