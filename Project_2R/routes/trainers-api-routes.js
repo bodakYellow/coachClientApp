@@ -14,4 +14,24 @@ module.exports = function(app) {
       res.json(dbTrainers);
     });
   });
-};
+
+
+// app.get("/trainer/:trainerID/client", function(req, res){
+
+//   db.Trainers.findAll({
+//     where: {
+//       id: req.params.trainerID
+//     },
+//     include: [db.Clients]
+//   }).then(function(clientlist){
+//     res.json(clientlist)
+//   });
+// });
+
+
+
+
+
+}; //end of exports
+
+
