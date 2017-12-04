@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "sqlpass123",
+    "password": "",
     "database": "clientTrainer",
     "host": "127.0.0.1",
     "dialect": "mysql"

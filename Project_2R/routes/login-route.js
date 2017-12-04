@@ -2,11 +2,11 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  app.get("/api/loginToTrainerDB", function(req, res) {
-console.log(req.body)
+  app.get("/api/loginToTrainerDB/:email", function(req, res) {
+console.log(req.params)
     db.Trainers.findOne({
       where: {
-        email: req.body.email;
+        email: req.params.email
       }
     }).then(function(result){
       console.log(result);
@@ -15,11 +15,11 @@ console.log(req.body)
   });
 
     
-  app.get("/api/loginToClientDB", function(req, res) {
-    console.log(req.body)
+  app.get("/api/loginToClientDB/:email", function(req, res) {
+    console.log(req.params)
     db.Clients.findOne({
       where: {
-        email: req.body.email;
+        email: req.params.email
       }
     }).then(function(result){
       console.log(result);
