@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
   Clients.associate = function(models) {
       Clients.belongsTo(models.Trainers, {
           foreignKey: {
-              allowNull: false
+              allowNull: true
           }
       });
   };
