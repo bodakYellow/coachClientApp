@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="assets/css/cal.css" rel="stylesheet">
+
+    <title>Cal Example</title>
+  </head>
+
+  <body>
+
+    <div class="new-cal"></div>
+  <script>
+
+      myCalendar = createCalendar({
+        options: {
+          class: 'my-class'
+        },
+        data: {
+          title: 'Training Session',
+          start: new Date('December 02, 2017 17:00'),
+          duration: 60,
+          address: 'San Francisco, CA',
+          description: 'Work them biceps out.'
+        }
+      });
+
+      document.querySelector('.new-cal').appendChild(myCalendar);
+  </script>
+  </body>
+</html>
+
+<script src="assets/js/cal.js"></script>

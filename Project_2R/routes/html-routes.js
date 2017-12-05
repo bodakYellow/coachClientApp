@@ -22,7 +22,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/template-nav.html"));
   });
 
-//----------trainer pages below
+//----------trainer pages below----------//
 
   app.get("/signup-trainer", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/signup-trainer.html"));
