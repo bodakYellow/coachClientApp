@@ -9,16 +9,21 @@ $(document).ready(function () {
 					console.log(email + " hi client radio checked")
 					$.get("/api/loginToClientDB/" + email)
 						.done(function (data) {
-							$("#email-input").val("")
 							console.log(data);
+							window.location.href = "/profile-client";
 						});
 				} else if ($("#trainerRadio").is(":checked")) {
 					console.log("trainer radio checked" + email)
 
 					$.get("/api/loginToTrainerDB/" + email)
 						.done(function (data) {
-							$("#email-input").val("")
 							console.log(data);
+							// Storing the trainer id in local storage for profile get request 
+							localStorage.setItem("trainerID", data.id);
+							// localStorage.setItem("lastname", "Smith")
+							console.log(data.id);
+							window.location.href = "/profile-trainer";
+
 						});
 				}
 			})
