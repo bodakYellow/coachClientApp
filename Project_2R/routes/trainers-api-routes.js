@@ -16,17 +16,17 @@ module.exports = function(app) {
   });
 
 
-// app.get("/trainer/:trainerID/client", function(req, res){
+app.get("/trainer/:trainerID", function(req, res){
 
-//   db.Trainers.findAll({
-//     where: {
-//       id: req.params.trainerID
-//     },
-//     include: [db.Clients]
-//   }).then(function(clientlist){
-//     res.json(clientlist)
-//   });
-// });
+  db.Trainers.findOne({
+    where: {
+      id: req.params.trainerID
+    },
+    include: [db.Clients]
+  }).then(function(clientlist){
+    res.json(clientlist)
+  });
+});
 
 
 
