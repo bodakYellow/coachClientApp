@@ -5,6 +5,7 @@ function getTrainerInfo() {
         .done(function (data) {
 
             console.log(data);
+            //js to inject the results here 
          
         });
 };

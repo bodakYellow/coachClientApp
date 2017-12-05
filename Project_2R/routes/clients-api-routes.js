@@ -15,4 +15,16 @@ module.exports = function(app) {
     });
   });
 
-};
+  app.get("/client/:clientID", function (req, res) {
+
+    db.Clients.findOne({
+      where: {
+        id: req.params.clientID
+      },
+      include: [db.Trainers]
+    }).then(function (clientData) {
+      res.json(clientData)
+    });
+  });
+
+};//end of export
