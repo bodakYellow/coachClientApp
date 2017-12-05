@@ -19,3 +19,7 @@ $.post("/api/client", newClient)
 });
 
 })
+
+// loop through Trainer database activity
+//if $("#activity").val() === trainer activity, then append that
+//trainer to confirmation page
