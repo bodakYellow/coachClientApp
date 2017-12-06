@@ -14,7 +14,6 @@ console.log(req.params)
     });
   });
 
-    
   app.get("/api/loginToClientDB/:email", function(req, res) {
     console.log(req.params)
     db.Clients.findOne({
@@ -51,6 +50,3 @@ console.log(req.params)
   //   });
 
   // });
-
-
-

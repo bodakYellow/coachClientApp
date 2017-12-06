@@ -19,7 +19,7 @@ $(document).ready(function () {
 					$.get("/api/loginToTrainerDB/" + email)
 						.done(function (data) {
 							console.log(data);
-							// Storing the trainer id in local storage for profile get request 
+							// Storing the trainer id in local storage for profile get request
 							localStorage.setItem("trainerID", data.id);
 							// localStorage.setItem("lastname", "Smith")
 							console.log(data.id);
