@@ -6,7 +6,19 @@ function getTrainerInfo() {
 
             console.log(data);
             //js to inject the results here 
-         
+            console.log(data.Clients.length)
+
+            for (var i = 0; i < data.Clients.length; i++) {
+            	$("#clientSchedule").append(   
+
+            		`<tr>
+			            <td>${data.Clients[i].name}</td>
+			            <td>${data.Clients[i].location}</td>
+			            <td>${data.Clients[i].time}</td>
+			            <td>${data.Clients[i].goal}</td>
+			        </tr>`
+            	)
+            }
         });
 };
 

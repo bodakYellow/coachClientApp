@@ -3,7 +3,7 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/loginToTrainerDB/:email", function(req, res) {
-console.log(req.params)
+    console.log(req.params)
     db.Trainers.findOne({
       where: {
         email: req.params.email

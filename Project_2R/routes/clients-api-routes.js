@@ -15,6 +15,21 @@ module.exports = function(app) {
     });
   });
 
+// match client to trainer based on activity
+  app.get("/api/matchClientToTrainer/:activity", function (req, res) {
+    console.log(req.params.activity)
+    db.Trainers.findOne({
+      where: {
+        activity: req.params.activity
+      }
+    })
+    .then(function(trainerMatch){
+      res.send(trainerMatch)
+    })
+  });//end of app.get
+
+
+
   app.get("/client/:clientID", function (req, res) {
 
     db.Clients.findOne({
