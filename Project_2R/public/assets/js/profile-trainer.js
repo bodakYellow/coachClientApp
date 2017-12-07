@@ -9,15 +9,15 @@ function getTrainerInfo() {
             console.log(data.Clients.length)
 
             for (var i = 0; i < data.Clients.length; i++) {
-            	$("#clientSchedule").append(   
+                $("#clientSchedule").append(
 
-            		`<tr>
+                    `<tr>
 			            <td>${data.Clients[i].name}</td>
 			            <td>${data.Clients[i].location}</td>
 			            <td>${data.Clients[i].time}</td>
 			            <td>${data.Clients[i].goal}</td>
 			        </tr>`
-            	)
+                )
             }
         });
 };

@@ -1,21 +1,21 @@
 
 var db = require("../models");
 
-module.exports = function(app) {
+module.exports = function (app) {
 
-  app.get("/api/client", function(req, res) {
-    db.Clients.findAll({}).then(function(dbClients) {
+  app.get("/api/client", function (req, res) {
+    db.Clients.findAll({}).then(function (dbClients) {
       res.json(dbClients);
     });
   });
 
-  app.post("/api/client", function(req, res) {
-    db.Clients.create(req.body).then(function(dbClients) {
+  app.post("/api/client", function (req, res) {
+    db.Clients.create(req.body).then(function (dbClients) {
       res.json(dbClients);
     });
   });
 
-// match client to trainer based on activity
+  // match client to trainer based on activity
   app.get("/api/matchClientToTrainer/:activity", function (req, res) {
     console.log(req.params.activity)
     db.Trainers.findOne({
@@ -23,9 +23,9 @@ module.exports = function(app) {
         activity: req.params.activity
       }
     })
-    .then(function(trainerMatch){
-      res.send(trainerMatch)
-    })
+      .then(function (trainerMatch) {
+        res.send(trainerMatch)
+      })
   });//end of app.get
 
 

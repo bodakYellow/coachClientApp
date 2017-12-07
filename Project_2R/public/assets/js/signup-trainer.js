@@ -1,19 +1,19 @@
-  //add a defaulted list of trainers
-  var defaultTrainer = {
-    name: "Kevin",
-    password: "whatever",
-    email: "kevin@gmail.com",
-    goal: "none",
-    location: "San Francisco",
-    time: "0900",
-    activity: "swimming"
-  };
-  console.log(defaultTrainer);
+  // //add a defaulted list of trainers
+  // var defaultTrainer = {
+  //   name: "Kevin",
+  //   password: "whatever",
+  //   email: "kevin@gmail.com",
+  //   goal: "none",
+  //   location: "San Francisco",
+  //   time: "0900",
+  //   activity: "swimming"
+  // };
+  // console.log(defaultTrainer);
 
-  $.post("/api/trainer", defaultTrainer)
-  .done(function(data) {
-  console.log(data);
-  });
+  // $.post("/api/trainer", defaultTrainer)
+  // .done(function(data) {
+  // console.log(data);
+  // });
 
 
   $("#add-trainer").on("click", function (event){
@@ -25,13 +25,20 @@
       goal: $("#trainer-goal").val(),
       location: $("#trainer-location").val(),
       time: $("#trainer-time").val(),
-      activity: $("#trainer-activity").val()
+      activity: $(".trainer-activity").attr('data-activity')
     };
-    console.log(newTrainer);
+    console.log(newTrainer.activity);
 
     $.post("/api/trainer", newTrainer)
     .done(function(data) {
       console.log(data);
-      window.location.href= "/template-nav";
-    });
-  })
+      $.get("/api/loginToTrainerDB/" + newTrainer.email)
+        .done(function (clientInfo) {
+          console.log(clientInfo);
+          localStorage.setItem("trainerID", data.id);
+          window.location.href = "/profile-trainer";
+          
+        });//end of get
+    });//end of post
+  });//end of function
+
