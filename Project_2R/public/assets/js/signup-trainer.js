@@ -25,7 +25,7 @@
       goal: $("#trainer-goal").val(),
       location: $("#trainer-location").val(),
       time: $("#trainer-time").val(),
-      activity: $(".trainer-activity").attr('data-activity')
+      activity: $(".form-control option:selected").val()
     };
     console.log(newTrainer.activity);
 

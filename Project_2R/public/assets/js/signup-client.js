@@ -2,7 +2,8 @@
 $("#add-client").on("click", function () {
   event.preventDefault();
 
-  var grabActivity = $("#activity").val();
+  // var grabActivity = $("#activity").val();
+  var grabActivity = $("#activity option:selected").val()
   //taking activity input, sending it to clients-api-routes.js to do user matching
 
   $.get("/api/matchClientToTrainer/" + grabActivity)
@@ -18,7 +19,8 @@ $("#add-client").on("click", function () {
         goal: $("#goal").val(),
         location: $("#location").val(),
         time: $("#time").val(),
-        activity: $("#activity").val(),
+        // activity: $("#activity").val(),
+        activity: $("#activity option:selected").val(),
         TrainerId: data.id
       };
 
