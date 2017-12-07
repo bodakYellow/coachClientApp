@@ -1,25 +1,51 @@
 
-$("#add-client").on("click", function (){
+$("#add-client").on("click", function () {
   event.preventDefault();
-  var newClient = {
-    name: $("#username").val(),
-    password: $("#password").val(),
-    email: $("#email").val(),
-    goal: $("#goal").val(),
-    location: $("#location").val(),
-    time: $("#time").val(),
-    activity: $("#activity").val()
-  };
-console.log(newClient);
 
-$.post("/api/client", newClient)
-.done(function(data) {
-  console.log(data);
-  window.location.href= "/template-nav";
-});
+  var grabActivity = $("#activity").val();
+  //taking activity input, sending it to clients-api-routes.js to do user matching
 
-})
+  $.get("/api/matchClientToTrainer/" + grabActivity)
+    .then(function (data) {
+      console.log(data)
 
-// loop through Trainer database activity
-//if $("#activity").val() === trainer activity, then append that
-//trainer to confirmation page
+      console.log(data.id)
+
+      var newClient = {
+        name: $("#username").val(),
+        password: $("#password").val(),
+        email: $("#email").val(),
+        goal: $("#goal").val(),
+        location: $("#location").val(),
+        time: $("#time").val(),
+        activity: $("#activity").val(),
+        TrainerId: data.id
+      };
+
+
+      $.post("/api/client", newClient)
+        .done(function (newClientInfo) {
+          console.log(newClientInfo);
+
+          //open new window with results
+          $.get("/api/loginToClientDB/" + newClient.email)
+            .done(function (clientInfo) {
+              console.log(clientInfo);
+              localStorage.setItem("clientID", clientInfo.id);
+              window.location.href = "/profile-client";
+            });
+
+        }); //post request ends
+    })//get request ends
+
+
+}) // end of function
+
+
+
+
+
+
+
+
+

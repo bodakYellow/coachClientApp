@@ -713,3 +713,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 #signInModal3{
   margin-top: 200px !important;
 }
+
+#trainer-name{
+  color: #fe8d36;
+}

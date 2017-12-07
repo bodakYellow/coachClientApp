@@ -32,10 +32,11 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="index.html">FitTrain</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
       <!--       <div class="collapse navbar-collapse" id="navbarResponsive">
 </div> -->
     </div>
@@ -49,8 +50,8 @@
     <div>
       <form class="container">
         <div class="form-group">
-          <label for="username">Username</label>
-          <input name="trainer-username" type="text" class="form-control" id="trainer-username" placeholder="Username">
+          <label for="username">Name</label>
+          <input name="trainer-username" type="text" class="form-control" id="trainer-username" placeholder="Name">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
@@ -60,24 +61,41 @@
           <label for="exampleInputEmail1">Email address</label>
           <input name="trainer-email" type="email" class="form-control" id="trainer-email" aria-describedby="emailHelp" placeholder="Enter email">
         </div>
+
+
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="form-group">
+              <label for="goal">What do you teach?</label>
+              <select class="selectpicker form-control">
+                <option class="trainer-activity" data-activity="endurance">Endurance Running</option>
+                <option class="trainer-activity" data-activity="cross-fit">Cross Fit</option>
+                <option class="trainer-activity" data-activity="yoga">Yoga</option>
+                <option class="trainer-activity" data-activity="cardio-weights">Cardio and Weights</option>
+                <option class="trainer-activity" data-activity="martial-arts">Martial Arts</option>
+                <option class="trainer-activity" data-activity="swimming">Swimming</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+
         <div class="form-group">
-          <label for="goal">What do you teach</label>
-          <input name="trainer-activity" type="text" class="form-control" id="trainer-activity" placeholder="Write here">
+          <label for="location">Where do you want to meet?</label>
+          <input name="trainer-location" type="text" class="form-control" id="trainer-location" placeholder="Write here">
         </div>
         <div class="form-group">
-         <label for="location">Where do you want to meet?</label>
-         <input name="trainer-location" type="text" class="form-control" id="trainer-location" placeholder="Write here">
+          <label for="time">What date and time works for you?</label>
+          <input name="trainer-time" type="text" class="form-control" id="trainer-time" placeholder="MM/DD/YYYY HH:MM">
         </div>
         <div class="form-group">
-         <label for="time">What date and time works for you?</label>
-         <input name="trainer-time" type="text" class="form-control" id="trainer-time" placeholder="MM/DD/YYYY HH:MM">
+          <label for="goal">Tell Us Your Goal</label>
+          <input name="trainer-goal" type="text" class="form-control" id="trainer-goal" placeholder="Write here">
         </div>
-        <div class="form-group">
-    	    <label for="goal">Tell Us Your Goal</label>
-    	    <input name="trainer-goal" type="text" class="form-control" id="trainer-goal" placeholder="Write here">
-    	  </div>
+        
         <div style="text-align:center" id="add-trainer">
-          <a href="/template-nav" class="btn btn-danger btn-lg">Register!</a>
+          <a href="#" class="btn btn-danger btn-lg">Register!</a>
         </div>
       </form>
     </div>
@@ -88,24 +106,25 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <span class="copyright">No copyright &copy; intented. UC Berekely Bootcamp project built by Jaymee Liu, Albert Yu, Stella U and Kevin Luc. Please note as seen on and testimonialS are dummy info. </span>
+          <span class="copyright">No copyright &copy; intented. UC Berekely Bootcamp project built by Jaymee Liu, Albert Yu, Stella U and Kevin Luc.
+            Please note as seen on and testimonialS are dummy info. </span>
         </div>
         <div class="col-md-4">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
               <a href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
+                <i class="fa fa-twitter"></i>
+              </a>
             </li>
             <li class="list-inline-item">
               <a href="#">
-                  <i class="fa fa-facebook"></i>
-                </a>
+                <i class="fa fa-facebook"></i>
+              </a>
             </li>
             <li class="list-inline-item">
               <a href="#">
-                  <i class="fa fa-linkedin"></i>
-                </a>
+                <i class="fa fa-linkedin"></i>
+              </a>
             </li>
           </ul>
         </div>

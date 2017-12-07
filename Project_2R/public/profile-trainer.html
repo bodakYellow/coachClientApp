@@ -40,8 +40,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
 
         <ul class="navbar-nav text-uppercase ml-auto">
+
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="index.html">Logout</a>
+            <a class="nav-link js-scroll-trigger" href="#">Track Progress</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#" id="logout">Logout</a>
           </li>
 
         </ul>
@@ -52,148 +57,141 @@
 
 
   <!-- Trainer Profile -->
-  <h1 style="text-align:center">Welcome (trainer name)</h1>
+  <div class="container">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h1 style="text-align:center">Welcome <span id="trainer-name"></span>!</h1>
+    <br/>
+    <h2>Upcoming Appointments</h2>
+    <br/>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Time</th>
+          <th>Goal</th>
+        </tr>
+      </thead>
+      <tbody id="clientSchedule">
+        <tr>
+          <td>DummyMan1</td>
+          <td>(location)</td>
+          <td>(Time)</td>
+          <td>(Goal)</td>
+        </tr>
+      
+        <!-- this is where the database result of clitnts will go 
+            (dynamically populated in profile-trainer.js-->
+  
+      </tbody>
+    </table>
+  </div>
 
-  <body>
-    <br>
-    <br>
+
+  <hr>
+
+  <div class="bootstrap-iso">
     <div class="container">
-      <h2>Upcoming Appointments</h2>
 
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Location</th>
-            <th>Time</th>
-            <th>Goal</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>DummyMan1</td>
-            <td>(location)</td>
-            <td>(Time)</td>
-            <td>(Goal)</td>
-          </tr>
-          <tr>
-            <td>DummyMan2</td>
-            <td>(location)</td>
-            <td>(Time)</td>
-            <td>(Goal)</td>
-          </tr>
-          <tr>
-            <td>DummyMan3</td>
-            <td>(location)</td>
-            <td>(Time)</td>
-            <td>(Goal)</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Create new appointments</h2>
+          <!-- Form code begins -->
+          <form method="post">
+            <div class="form-group">
+              <!-- Date input -->
+              <label class="control-label" for="date">Date</label>
+              <input id="dateInput" class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
+            </div>
+          </form>
 
 
-    <hr>
+          <form>
+            <div class="form-group">
+              <label>Enter Start Time With AM PM:</label>
+              <input id="startTimeInput" data-format="hh:mm A" class="form-control sel-time-am" placeholder="Ex: 08:00 AM" type="text">
+            </div>
+          </form>
 
-    <div class="bootstrap-iso">
-      <div class="container">
+          <form>
+            <div class="form-group">
+              <label>Enter End Time With AM PM:</label>
+              <input id="endTimeInput" data-format="hh:mm A" class="form-control sel-time-am" placeholder="Ex: 09:30 AM" type="text">
+            </div>
+            <div class="form-group">
+              <!-- Submit button -->
+              <button class="btn btn-primary" id="submitbtn" name="submit" type="submit">Submit</button>
+            </div>
+          </form>
 
-        <div class="row">
-          <div class="col-md-6">
-            <h2>Create new appointments</h2>
-            <!-- Form code begins -->
-            <form method="post">
-              <div class="form-group">
-                <!-- Date input -->
-                <label class="control-label" for="date">Date</label>
-                <input id="dateInput" class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text" />
-              </div>
-            </form>
-
-
-            <form>
-              <div class="form-group">
-                <label>Enter Start Time With AM PM:</label>
-                <input id="startTimeInput" data-format="hh:mm A" class="form-control sel-time-am" placeholder="Ex: 08:00 AM" type="text">
-              </div>
-            </form>
-
-            <form>
-              <div class="form-group">
-                <label>Enter End Time With AM PM:</label>
-                <input id="endTimeInput" data-format="hh:mm A" class="form-control sel-time-am" placeholder="Ex: 09:30 AM" type="text">
-              </div>
-              <div class="form-group">
-                <!-- Submit button -->
-                <button class="btn btn-primary" id="submitbtn" name="submit" type="submit">Submit</button>
-              </div>
-            </form>
-
-          </div>
-          <div class="col-md-6">
-            <h2>Appointments still available</h3>
-          </div>
         </div>
-
-      </div>
-    </div>
-
-
-
-
-
-    <!-- Footer -->
-    <footer id="footer-sub">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <span class="copyright">No copyright &copy; intented. UC Berekely Bootcamp project built by Jaymee Liu, Albert Yu, Stella U and Kevin
-              Luc. Please note as seen on and testimonialS are dummy info. </span>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-facebook"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="list-inline quicklinks">
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
-              </li>
-            </ul>
-          </div>
+        <div class="col-md-6">
+          <h2>Appointments still available</h3>
         </div>
       </div>
-    </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="assets/vendor/jquery/jquery.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    </div>
+  </div>
 
-    <!-- Plugin JavaScript -->
-    <script src="assets/vendor/jquery-easing/jquery.easing.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="assets/js/agency.js"></script>
-    <script src="assets/js/profile-trainer.js"></script>
 
-  </body>
+
+
+  <!-- Footer -->
+  <footer id="footer-sub">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span class="copyright">No copyright &copy; intented. UC Berekely Bootcamp project built by Jaymee Liu, Albert Yu, Stella U and Kevin Luc.
+            Please note as seen on and testimonialS are dummy info. </span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="assets/vendor/jquery/jquery.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="assets/vendor/jquery-easing/jquery.easing.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="assets/js/agency.js"></script>
+  <script src="assets/js/profile-trainer.js"></script>
+
+</body>
 
 </html>
