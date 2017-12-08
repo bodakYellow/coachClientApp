@@ -13,8 +13,7 @@ function getClientInfo() {
             $('#goal').append(`${data.goal}`)
             $('#trainer-name').append(`${data.Trainer.name}`)
             $('#activity').append(`${data.activity}`)
-            // $('#time').append(`Your appointment has been schedule for ${data.time}`)
-            // $('#location').append(`Please meet them at ${data.location}`)
+
 
 
         });
