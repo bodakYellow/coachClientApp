@@ -12,15 +12,12 @@ function loadEvents() {
     console.log(selectedTime)
     console.log(location)
 
-  mailString = '?subject=Training session with' + encodeURIComponent($(trainerName).val())
-      + '&body=You will have a training session on ' + encodeURIComponent($(selectedTime).val())
-      + 'at '+ encodeURIComponent($(location).val());
+  mailString = '?subject=Training session with Kevin&body=Dear Stella, You will have a swimming session on Dec 8, 2018 09: 00with Kevin. Thanks for signing up with FitTrain!';
   //
-  $('#mail-link').attr('href',  'mailto:' + encodeURIComponent($(clientEmail).val())+ mailString);
+  $('#mail-link').attr('href',  'mailto: stellaulw@gmail.com' + mailString);
 
 }
+
 loadEvents();
 
-
-
-//Add event to calendar
+// encodeURIComponent($(clientEmail).val())
