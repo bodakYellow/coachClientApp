@@ -61,45 +61,13 @@
 
       return '<a class="icon-yahoo" target="_blank" href="' +
         href + '">Yahoo! Calendar</a>';
-    },
-
-    ics: function(event, eClass, calendarName) {
-      var startTime = formatTime(event.start);
-      var endTime = calculateEndTime(event);
-
-      var href = encodeURI(
-        'data:text/calendar;charset=utf8,' + [
-          'BEGIN:VCALENDAR',
-          'VERSION:2.0',
-          'BEGIN:VEVENT',
-          'URL:' + document.URL,
-          'DTSTART:' + (startTime || ''),
-          'DTEND:' + (endTime || ''),
-          'SUMMARY:' + (event.title || ''),
-          'DESCRIPTION:' + (event.description || ''),
-          'LOCATION:' + (event.address || ''),
-          'END:VEVENT',
-          'END:VCALENDAR'].join('\n'));
-
-      return '<a class="' + eClass + '" target="_blank" href="' +
-        href + '">' + calendarName + ' Calendar</a>';
-    },
-
-    ical: function(event) {
-      return this.ics(event, 'icon-ical', 'iCal');
-    },
-
-    outlook: function(event) {
-      return this.ics(event, 'icon-outlook', 'Outlook');
     }
   };
 
   var generateCalendars = function(event) {
     return {
       google: calendarGenerators.google(event),
-      yahoo: calendarGenerators.yahoo(event),
-      ical: calendarGenerators.ical(event),
-      outlook: calendarGenerators.outlook(event)
+      yahoo: calendarGenerators.yahoo(event)
     };
   };
 
@@ -129,7 +97,7 @@
     var result = document.createElement('div');
 
     result.innerHTML = '<label for="checkbox-for-' +
-      calendarId + '" class="add-to-calendar-checkbox"> + Add to my Calendar</label>';
+      calendarId + '" class="add-to-calendar-checkbox"> click me to choose calendars</label>';
     result.innerHTML += '<input name="add-to-calendar-checkbox" class="add-to-calendar-checkbox" id="checkbox-for-' + calendarId + '" type="checkbox">';
 
     Object.keys(calendars).forEach(function(services) {

@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="assets/css/cal.css" rel="stylesheet">
-
-    <title>Cal Example</title>
+    <title>Yahoogle</title>
   </head>
 
   <body>
 
     <div class="new-cal"></div>
+      <script src="assets/js/cal.js"></script>
   <script>
 
       myCalendar = createCalendar({
-        options: {
-          class: 'my-class'
-        },
         data: {
           title: 'Training Session',
-          start: new Date('December 02, 2017 17:00'),
+          start: new Date('December 08, 2017 09:00'),
           duration: 60,
           address: 'San Francisco, CA',
-          description: 'Work them biceps out.'
+          description: 'Swimming session with Kevin.'
         }
       });
 
       document.querySelector('.new-cal').appendChild(myCalendar);
   </script>
+
   </body>
 </html>
-
-<script src="assets/js/cal.js"></script>

@@ -3,7 +3,7 @@ function loadEvents() {
     function updateMailString() {
         mailString = '?subject=' + encodeURIComponent($('#subject').val())
             + '&body=' + encodeURIComponent($('#message').val());
-        $("input#email").attr('href',  'mailto:person@email.com' + mailString);
+        $('#mail-link').attr('href',  'mailto:stellaulw@gmail.com' + mailString);
     }
     $( "#subject" ).focusout(function() { updateMailString(); });
     $( "#message" ).focusout(function() { updateMailString(); });

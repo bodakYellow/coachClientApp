@@ -11,7 +11,7 @@ $(document).ready(function () {
 						.done(function (data) {
 							console.log(data);
 							localStorage.setItem("clientID", data.id);
-							window.location.href = "/profile-client";
+							window.location.href = "/template-nav";
 						});
 				} else if ($("#trainerRadio").is(":checked")) {
 					// console.log("trainer radio checked" + email)
