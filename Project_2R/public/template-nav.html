@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>FitTrain - Trainer matching app</title>
+  <title>FitTrain - User Profile</title>
   <!-- Icon -->
   <link rel="icon" href="assets/img/logos/train-icon.png">
   <!-- Bootstrap core CSS -->
@@ -38,48 +38,48 @@
         <i class="fa fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <!--         <ul class="navbar-nav text-uppercase ml-auto">
-  <li class="nav-item">
-    <a class="nav-link js-scroll-trigger" href="#tell-me-more">Tell Me More</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link js-scroll-trigger" href="#about">About</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link js-scroll-trigger" href="#testimonials">Testimonials</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-  </li>
-</ul>
-      </div> -->
+
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#">Track Progress</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#" id="logout">Logout</a>
+          </li>
+
+        </ul>
       </div>
+    </div>
   </nav>
 
 
-  <!-- Services -->
+  <!-- User Profile -->
+
   <section id="services">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">You're all set,
-            <span id="client-name">Stella</span>!
+            <span id="client-name"></span>!
             <p>you have matched with
-              <span id="trainer-name"> Kevin </span>!</h2>
-              <h4><p><span id="time"> </span><p><span id="goal"> </span> <p><span id="location"> </span> </h4>
-          <h3 class="section-subheading text-muted"> Here is what you can do next --- </h3>
+              <span id="trainer-name"></span>!</h2>
+          <h3 class="section-subheading text-muted"> They can help you with your goal of
+            <span id="goal"></span>. They are an expert in
+            <span id="activity"></span>.
+            <br> Here is what you can do next --- </h3>
         </div>
       </div>
       <div class="row text-center">
         <div class="col-md-3">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <a href="../public/cal.html">
+            <a href="../cal.html">
               <i class="fa fa-calendar-plus-o fa-stack-1x fa-inverse"></i>
             </a>
-          </span><p>
-          <h4 class="service-heading">Add event to calendar</h4>
-          <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p> -->
+          </span>
+          <p>
+            <h4 class="service-heading">Add event to calendar</h4>
+            <!-- <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p> -->
         </div>
         <div class="col-md-3">
           <span class="fa-stack fa-4x">
@@ -94,7 +94,7 @@
         <div class="col-md-3">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <a href="../public/profile-trainer.html">
+            <a href="../profile-trainer.html">
               <i class="fa fa-user-o fa-stack-1x fa-inverse"></i>
             </a>
           </span>
@@ -104,7 +104,7 @@
         <div class="col-md-3">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <a href="../public/profile-client.html">
+            <a href="../profile-client.html">
               <i class="fa fa-wpforms fa-stack-1x fa-inverse"></i>
             </a>
           </span>
@@ -116,6 +116,27 @@
       </div>
     </div>
   </section>
+
+
+
+
+  <!-- <section id="client-profile">
+
+    <div style="text-align:center"> -->
+  <!--Welcome name will go here  -->
+  <!-- <h1 style="text-align:center" id="client-name"></h1>
+      <p id="goal"></p>
+      <p id="trainer"></p>
+      <p id="client-email"></p>
+      <p id="time"></p>
+      <p id="location"></p>
+      <a href="#" class="btn btn-success btn-lg">Add to Calender!</a>
+    </div>
+  </section> -->
+
+
+
+
   <!-- Footer -->
   <footer id="footer-sub">
     <div class="container">
