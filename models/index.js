@@ -9,9 +9,9 @@ var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
 if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable]);
+  var sequelize = new Sequelize("mysql://d2m2jestjjkw8s96:ukt6gne84d8blf9e@tkck4yllxdrw0bhi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/am75xa2zuwdpozmc");
 } else {
-  var sequelize = new Sequelize(config.database, config.username, config.password, config);
+  var sequelize = new Sequelize("mysql://d2m2jestjjkw8s96:ukt6gne84d8blf9e@tkck4yllxdrw0bhi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/am75xa2zuwdpozmc");
 }
 
 fs
