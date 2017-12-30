@@ -11,4 +11,4 @@ Here is a demo hosted on Heroku: https://fittrain.herokuapp.com/
 `sequalize`: database 
 
 
-![FitToScrape](/public/assets/img/fittoscrape.png?raw=true)
+![FitToScrape](/public/assets/img/fitrain2.png?raw=true)
